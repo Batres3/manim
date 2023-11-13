@@ -205,7 +205,7 @@ class Mobject(object):
         return self
 
     @affects_data
-    def set_points(self, points: Vect3Array | list[Vect3]) -> Self:
+    def set_points(self, points: Vect3Array | list[Vect3]) -> Self: # BATH: Vertex data is set here
         self.resize_points(len(points), resize_func=resize_preserving_order)
         self.data["point"][:] = points
         return self
@@ -1966,7 +1966,7 @@ class Mobject(object):
             self.init_shader_data(ctx)
             self._shaders_initialized = True
 
-        self.shader_wrapper.vert_data = self.get_shader_data()
+        self.shader_wrapper.vert_data = self.get_shader_data() # BATH: Setting the vertex data
         self.shader_wrapper.vert_indices = self.get_shader_vert_indices()
         self.shader_wrapper.bind_to_mobject_uniforms(self.get_uniforms())
         self.shader_wrapper.depth_test = self.depth_test
@@ -2009,7 +2009,7 @@ class Mobject(object):
         for shader_wrapper in self.shader_wrappers:
             shader_wrapper.update_program_uniforms(camera_uniforms)
             shader_wrapper.pre_render()
-            shader_wrapper.render()
+            shader_wrapper.render() # BATH: Lower level render call (it is batched in shader_wrapper creation)
 
     # Event Handlers
     """

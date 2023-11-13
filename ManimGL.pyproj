@@ -1,0 +1,253 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ea77522f-1b6b-46dc-bf5a-ae84ab6465e5</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>ManimGL.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ManimGL</Name>
+    <RootNamespace>ManimGL</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="docs\example.py" />
+    <Compile Include="docs\source\conf.py" />
+    <Compile Include="docs\source\manim_example_ext.py" />
+    <Compile Include="example_scenes.py" />
+    <Compile Include="logo\logo.py" />
+    <Compile Include="ManimGL.py" />
+    <Compile Include="manimlib\animation\animation.py" />
+    <Compile Include="manimlib\animation\composition.py" />
+    <Compile Include="manimlib\animation\creation.py" />
+    <Compile Include="manimlib\animation\fading.py" />
+    <Compile Include="manimlib\animation\growing.py" />
+    <Compile Include="manimlib\animation\indication.py" />
+    <Compile Include="manimlib\animation\movement.py" />
+    <Compile Include="manimlib\animation\numbers.py" />
+    <Compile Include="manimlib\animation\rotation.py" />
+    <Compile Include="manimlib\animation\specialized.py" />
+    <Compile Include="manimlib\animation\transform.py" />
+    <Compile Include="manimlib\animation\transform_matching_parts.py" />
+    <Compile Include="manimlib\animation\update.py" />
+    <Compile Include="manimlib\animation\__init__.py" />
+    <Compile Include="manimlib\camera\camera.py" />
+    <Compile Include="manimlib\camera\camera_frame.py" />
+    <Compile Include="manimlib\camera\__init__.py" />
+    <Compile Include="manimlib\config.py" />
+    <Compile Include="manimlib\constants.py" />
+    <Compile Include="manimlib\event_handler\event_dispatcher.py" />
+    <Compile Include="manimlib\event_handler\event_listner.py" />
+    <Compile Include="manimlib\event_handler\event_type.py" />
+    <Compile Include="manimlib\event_handler\__init__.py" />
+    <Compile Include="manimlib\extract_scene.py" />
+    <Compile Include="manimlib\logger.py" />
+    <Compile Include="manimlib\mobject\boolean_ops.py" />
+    <Compile Include="manimlib\mobject\changing.py" />
+    <Compile Include="manimlib\mobject\coordinate_systems.py" />
+    <Compile Include="manimlib\mobject\frame.py" />
+    <Compile Include="manimlib\mobject\functions.py" />
+    <Compile Include="manimlib\mobject\geometry.py" />
+    <Compile Include="manimlib\mobject\interactive.py" />
+    <Compile Include="manimlib\mobject\matrix.py" />
+    <Compile Include="manimlib\mobject\mobject.py" />
+    <Compile Include="manimlib\mobject\mobject_update_utils.py" />
+    <Compile Include="manimlib\mobject\numbers.py" />
+    <Compile Include="manimlib\mobject\number_line.py" />
+    <Compile Include="manimlib\mobject\probability.py" />
+    <Compile Include="manimlib\mobject\shape_matchers.py" />
+    <Compile Include="manimlib\mobject\svg\brace.py" />
+    <Compile Include="manimlib\mobject\svg\drawings.py" />
+    <Compile Include="manimlib\mobject\svg\old_tex_mobject.py" />
+    <Compile Include="manimlib\mobject\svg\special_tex.py" />
+    <Compile Include="manimlib\mobject\svg\string_mobject.py" />
+    <Compile Include="manimlib\mobject\svg\svg_mobject.py" />
+    <Compile Include="manimlib\mobject\svg\text_mobject.py" />
+    <Compile Include="manimlib\mobject\svg\tex_mobject.py" />
+    <Compile Include="manimlib\mobject\svg\__init__.py" />
+    <Compile Include="manimlib\mobject\three_dimensions.py" />
+    <Compile Include="manimlib\mobject\types\dot_cloud.py" />
+    <Compile Include="manimlib\mobject\types\image_mobject.py" />
+    <Compile Include="manimlib\mobject\types\point_cloud_mobject.py" />
+    <Compile Include="manimlib\mobject\types\surface.py" />
+    <Compile Include="manimlib\mobject\types\vectorized_mobject.py" />
+    <Compile Include="manimlib\mobject\types\__init__.py" />
+    <Compile Include="manimlib\mobject\value_tracker.py" />
+    <Compile Include="manimlib\mobject\vector_field.py" />
+    <Compile Include="manimlib\mobject\__init__.py" />
+    <Compile Include="manimlib\scene\interactive_scene.py" />
+    <Compile Include="manimlib\scene\scene.py" />
+    <Compile Include="manimlib\scene\scene_file_writer.py" />
+    <Compile Include="manimlib\scene\__init__.py" />
+    <Compile Include="manimlib\shader_wrapper.py" />
+    <Compile Include="manimlib\typing.py" />
+    <Compile Include="manimlib\utils\bezier.py" />
+    <Compile Include="manimlib\utils\color.py" />
+    <Compile Include="manimlib\utils\customization.py" />
+    <Compile Include="manimlib\utils\debug.py" />
+    <Compile Include="manimlib\utils\dict_ops.py" />
+    <Compile Include="manimlib\utils\directories.py" />
+    <Compile Include="manimlib\utils\family_ops.py" />
+    <Compile Include="manimlib\utils\file_ops.py" />
+    <Compile Include="manimlib\utils\images.py" />
+    <Compile Include="manimlib\utils\init_config.py" />
+    <Compile Include="manimlib\utils\iterables.py" />
+    <Compile Include="manimlib\utils\paths.py" />
+    <Compile Include="manimlib\utils\rate_functions.py" />
+    <Compile Include="manimlib\utils\shaders.py" />
+    <Compile Include="manimlib\utils\simple_functions.py" />
+    <Compile Include="manimlib\utils\sounds.py" />
+    <Compile Include="manimlib\utils\space_ops.py" />
+    <Compile Include="manimlib\utils\tex.py" />
+    <Compile Include="manimlib\utils\tex_file_writing.py" />
+    <Compile Include="manimlib\utils\tex_to_symbol_count.py" />
+    <Compile Include="manimlib\utils\__init__.py" />
+    <Compile Include="manimlib\window.py" />
+    <Compile Include="manimlib\__init__.py" />
+    <Compile Include="manimlib\__main__.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".github\" />
+    <Folder Include=".github\ISSUE_TEMPLATE\" />
+    <Folder Include=".github\workflows\" />
+    <Folder Include="docs\" />
+    <Folder Include="docs\source\" />
+    <Folder Include="docs\source\development\" />
+    <Folder Include="docs\source\documentation\" />
+    <Folder Include="docs\source\documentation\animation\" />
+    <Folder Include="docs\source\documentation\camera\" />
+    <Folder Include="docs\source\documentation\mobject\" />
+    <Folder Include="docs\source\documentation\scene\" />
+    <Folder Include="docs\source\documentation\shaders\" />
+    <Folder Include="docs\source\documentation\utils\" />
+    <Folder Include="docs\source\getting_started\" />
+    <Folder Include="docs\source\_static\" />
+    <Folder Include="logo\" />
+    <Folder Include="manimlib\" />
+    <Folder Include="manimlib\animation\" />
+    <Folder Include="manimlib\camera\" />
+    <Folder Include="manimlib\event_handler\" />
+    <Folder Include="manimlib\mobject\" />
+    <Folder Include="manimlib\mobject\svg\" />
+    <Folder Include="manimlib\mobject\types\" />
+    <Folder Include="manimlib\scene\" />
+    <Folder Include="manimlib\shaders\" />
+    <Folder Include="manimlib\shaders\image\" />
+    <Folder Include="manimlib\shaders\inserts\" />
+    <Folder Include="manimlib\shaders\mandelbrot_fractal\" />
+    <Folder Include="manimlib\shaders\newton_fractal\" />
+    <Folder Include="manimlib\shaders\quadratic_bezier_fill\" />
+    <Folder Include="manimlib\shaders\quadratic_bezier_stroke\" />
+    <Folder Include="manimlib\shaders\surface\" />
+    <Folder Include="manimlib\shaders\textured_surface\" />
+    <Folder Include="manimlib\shaders\true_dot\" />
+    <Folder Include="manimlib\utils\" />
+    <Folder Include="manimlib\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".github\ISSUE_TEMPLATE\bug_report.md" />
+    <Content Include=".github\ISSUE_TEMPLATE\config.yml" />
+    <Content Include=".github\ISSUE_TEMPLATE\error-when-using.md" />
+    <Content Include=".github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include=".github\workflows\docs.yml" />
+    <Content Include=".github\workflows\publish.yml" />
+    <Content Include=".gitignore" />
+    <Content Include="docs\make.bat" />
+    <Content Include="docs\Makefile" />
+    <Content Include="docs\requirements.txt" />
+    <Content Include="docs\source\development\about.rst" />
+    <Content Include="docs\source\development\changelog.rst" />
+    <Content Include="docs\source\development\contributing.rst" />
+    <Content Include="docs\source\documentation\animation\index.rst" />
+    <Content Include="docs\source\documentation\camera\index.rst" />
+    <Content Include="docs\source\documentation\constants.rst" />
+    <Content Include="docs\source\documentation\custom_config.rst" />
+    <Content Include="docs\source\documentation\mobject\index.rst" />
+    <Content Include="docs\source\documentation\scene\index.rst" />
+    <Content Include="docs\source\documentation\shaders\index.rst" />
+    <Content Include="docs\source\documentation\utils\index.rst" />
+    <Content Include="docs\source\getting_started\configuration.rst" />
+    <Content Include="docs\source\getting_started\example_scenes.rst" />
+    <Content Include="docs\source\getting_started\installation.rst" />
+    <Content Include="docs\source\getting_started\quickstart.rst" />
+    <Content Include="docs\source\getting_started\structure.rst" />
+    <Content Include="docs\source\getting_started\whatsnew.rst" />
+    <Content Include="docs\source\index.rst" />
+    <Content Include="docs\source\_static\icon.png" />
+    <Content Include="LICENSE.md" />
+    <Content Include="logo\cropped.png" />
+    <Content Include="logo\graph.png" />
+    <Content Include="logo\transparent_graph.png" />
+    <Content Include="logo\white_with_name.png" />
+    <Content Include="logo\with_name.png" />
+    <Content Include="logo\with_subtext.png" />
+    <Content Include="MANIFEST.in" />
+    <Content Include="manimlib\default_config.yml" />
+    <Content Include="manimlib\shaders\image\frag.glsl" />
+    <Content Include="manimlib\shaders\image\vert.glsl" />
+    <Content Include="manimlib\shaders\inserts\complex_functions.glsl" />
+    <Content Include="manimlib\shaders\inserts\emit_gl_Position.glsl" />
+    <Content Include="manimlib\shaders\inserts\finalize_color.glsl" />
+    <Content Include="manimlib\shaders\inserts\get_gl_Position.glsl" />
+    <Content Include="manimlib\shaders\inserts\get_unit_normal.glsl" />
+    <Content Include="manimlib\shaders\inserts\get_xyz_to_uv.glsl" />
+    <Content Include="manimlib\shaders\inserts\NOTE.md" />
+    <Content Include="manimlib\shaders\mandelbrot_fractal\frag.glsl" />
+    <Content Include="manimlib\shaders\mandelbrot_fractal\vert.glsl" />
+    <Content Include="manimlib\shaders\newton_fractal\frag.glsl" />
+    <Content Include="manimlib\shaders\newton_fractal\vert.glsl" />
+    <Content Include="manimlib\shaders\quadratic_bezier_fill\frag.glsl" />
+    <Content Include="manimlib\shaders\quadratic_bezier_fill\geom.glsl" />
+    <Content Include="manimlib\shaders\quadratic_bezier_fill\vert.glsl" />
+    <Content Include="manimlib\shaders\quadratic_bezier_stroke\frag.glsl" />
+    <Content Include="manimlib\shaders\quadratic_bezier_stroke\geom.glsl" />
+    <Content Include="manimlib\shaders\quadratic_bezier_stroke\vert.glsl" />
+    <Content Include="manimlib\shaders\simple_vert.glsl" />
+    <Content Include="manimlib\shaders\surface\frag.glsl" />
+    <Content Include="manimlib\shaders\surface\vert.glsl" />
+    <Content Include="manimlib\shaders\textured_surface\frag.glsl" />
+    <Content Include="manimlib\shaders\textured_surface\vert.glsl" />
+    <Content Include="manimlib\shaders\true_dot\frag.glsl" />
+    <Content Include="manimlib\shaders\true_dot\vert.glsl" />
+    <Content Include="manimlib\tex_templates.yml" />
+    <Content Include="manimlib\__pycache__\constants.cpython-38.pyc" />
+    <Content Include="manimlib\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="pyproject.toml" />
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+    <Content Include="setup.cfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.8</Version>
+      <Description>env (Python 3.8 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

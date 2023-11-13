@@ -89,7 +89,7 @@ def set_program_uniform(
         return False
 
     try:
-        program[name].value = value
+        program[name].value = value # BATH: Uniforms are set here
     except KeyError:
         return False
     uniform_mirror[name] = value

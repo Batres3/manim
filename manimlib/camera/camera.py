@@ -226,7 +226,7 @@ class Camera(object):
         self.refresh_uniforms()
         self.fbo.use()
         for mobject in mobjects:
-            mobject.render(self.ctx, self.uniforms)
+            mobject.render(self.ctx, self.uniforms) # BATH: Render function is here
         if self.window is not None and self.fbo is not self.window_fbo:
             self.blit(self.fbo, self.window_fbo)
 

@@ -78,8 +78,8 @@ class ShaderWrapper(object):
             self.program = None
             self.vert_format = None
             return
-        self.program = get_shader_program(self.ctx, **self.program_code)
-        self.vert_format = moderngl.detect_format(self.program, self.vert_attributes)
+        self.program = get_shader_program(self.ctx, **self.program_code) # BATH: Setting the program
+        self.vert_format = moderngl.detect_format(self.program, self.vert_attributes) # BATH: VAO format definition (gets types inside vert_data)
 
     def init_textures(self, texture_paths: dict[str, str]):
         names_to_ids = {
@@ -229,12 +229,12 @@ class ShaderWrapper(object):
 
     def get_vertex_buffer_object(self, refresh: bool = True):
         if refresh:
-            self.vbo = self.ctx.buffer(self.vert_data)
+            self.vbo = self.ctx.buffer(self.vert_data) # BATH: Vertex buffer object definition (layout is in vao for some reason?)
         return self.vbo
 
     def get_index_buffer_object(self, refresh: bool = True):
         if refresh and len(self.vert_indices) > 0:
-            self.ibo = self.ctx.buffer(self.vert_indices.astype(np.uint32))
+            self.ibo = self.ctx.buffer(self.vert_indices.astype(np.uint32)) # BATH: Index buffer object definition
         return self.ibo
 
     def generate_vao(self, refresh: bool = True):
@@ -244,7 +244,7 @@ class ShaderWrapper(object):
         ibo = self.get_index_buffer_object(refresh)
 
         # Vertex array object
-        self.vao = self.ctx.vertex_array(
+        self.vao = self.ctx.vertex_array( # BATH: Vertex array object definition
             program=self.program,
             content=[(vbo, self.vert_format, *self.vert_attributes)],
             index_buffer=ibo,
