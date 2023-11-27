@@ -1157,7 +1157,7 @@ class VMobject(Mobject):
             return self.data["joint_product"]
 
         # Find all the unit tangent vectors at each joint
-        a0, h, a1 = points[0:-1:2], points[1::2], points[2::2]
+        a0, h, a1 = points[0:-1:2], points[1::2], points[2::2] # BATH: why is number of points odd?
         a0_to_h = h - a0
         h_to_a1 = a1 - h
 
@@ -1186,6 +1186,12 @@ class VMobject(Mobject):
             out=self.data["joint_product"][:, :3]
         )
         self.data["joint_product"][:, 3] = (vect_to_vert * vect_from_vert).sum(1)
+        print("vect to vert")
+        print(vect_to_vert)
+        print("vect from vert")
+        print(vect_from_vert)
+        print("joint prods")
+        print(self.data["joint_product"])
         return self.data["joint_product"]
 
     def lock_matching_data(self, vmobject1: VMobject, vmobject2: VMobject) -> Self:
